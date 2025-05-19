@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Borena Pvt. Ltd – Sustainable Banana Fiber Tableware</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    :root {
+      --deep-green: #43c407;
+      --earth-green: #53885b;
+      --warm-green: #5a8f5e;
+      --sage-green: #8ba888;
+      --light-green: #d0d6b3;
+      --cream: #f5f5dc;
+      --dark-brown: #3a3226;
+      --shadow: 0 4px 12px rgba(58,50,38,0.12);
+      --transition: all 0.3s ease;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--cream);
+      color: var(--dark-brown);
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    a { color: var(--earth-green); text-decoration: none; transition: var(--transition); }
+    a:hover { color: var(--deep-green); text-decoration: underline; }
+    header {
+      background: var(--deep-green);
+      color: var(--light-green);
+      padding: 1rem 0;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      justify-content: center;
+      margin: 0.5rem 0 0 0;
+      padding: 0;
+    }
+    nav a {
+      color: var(--light-green);
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+    nav a.active, nav a:hover {
+      background: var(--sage-green);
+      color: var(--dark-brown);
+      text-decoration: none;
+    }
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(42,90,64,0.7), rgba(42,90,64,0.7)),
+                  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: var(--light-green); 
+      animation: fadeIn 1.5s ease;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      max-width: 800px;
+    }
+    .hero-content h1 {
+      font-family: 'Georgia', serif;
+      font-size: 2.8rem;
+      color: var(--light-green);
+      margin-bottom: 1rem;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    .hero-content p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      color: var(--cream);
+      font-weight: 500;
+    }
+    .cta-btns {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .cta-btn {
+      background: var(--sage-green);
+      color: var(--dark-brown);
+      border: none;
+      border-radius: 30px;
+      padding: 1rem 2.2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .cta-btn:hover {
+      background: var(--light-green);
+      color: var(--deep-green);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    /* SECTION TITLES */
+    section {
+      padding: 4rem 0 3rem 0;
+      border-bottom: 1px solid #e2d7c2;
+    }
+    h2.section-title {
+      text-align: center;
+      font-family: 'Georgia', serif;
+      color: var(--deep-green);
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
+      letter-spacing: 1.1px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+    h2.section-title:after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 4px;
+      background: var(--sage-green);
+      bottom: 0;
+      left: 25%;
+      border-radius: 2px;
+    }
+    /* WHY CHOOSE */
+    .why-choose {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .icon-box {
+      background: var(--light-green);
+      border: 2px solid var(--sage-green);
+      border-radius: 16px;
+      width: 280px;
+      padding: 2rem 1.8rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .icon-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .icon-box img {
+      width: 70px;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    .icon-box h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--deep-green);
+    }
+    /* PRODUCTS */
+    .product-range {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .product-tile {
+      background: #fff;
+      border: 2px solid var(--sage-green);
+      border-radius: 16px;
+      width: 220px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .product-tile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .product-tile img {
+      height: 130px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    .product-tile:hover img {
+      transform: scale(1.1);
+    }
+    .product-tile h4 {
+      margin: 0.8rem 0 0.3rem 0;
+      color: var(--deep-green);
+      font-size: 1.1rem;
+    }
+    .product-tile ul {
+      text-align: left;
+      margin: 1rem 0 1.2rem 0;
+      padding-left: 1.2rem;
+      font-size: 0.97rem;
+      color: var(--dark-brown);
+    }
+    .product-tile .order-btn {
+      background: var(--earth-green);
+      color: var(--light-green);
+      border: none;
+      border-radius: 20px;
+      padding: 0.6rem 1.3rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: var(--transition);
+    }
+    .product-tile .order-btn:hover {
+      background: var(--sage-green);
+      color: var(--dark-brown);
+    }
+    /* VIDEO & TESTIMONIALS */
+    .video-testimonials {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+    }
+    .video-container, .testimonials-container {
+      flex: 1 1 48%;
+      background: var(--light-green);
+      border: 2px solid var(--sage-green);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .video-container:hover, .testimonials-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .video-container iframe {
+      width: 100%;
+      height: 280px;
+      border-radius: 12px;
+      border: none;
+    }
+    .testimonials-container h4 {
+      color: var(--deep-green);
+      font-family: 'Georgia', serif;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .testimonial {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: var(--dark-brown);
+      padding: 0 0.5rem;
+      position: relative;
+    }
+    .testimonial:before {
+      content: '"';
+      font-size: 3rem;
+      color: var(--sage-green);
+      position: absolute;
+      left: -15px;
+      top: -15px;
+      opacity: 0.3;
+    }
+    .client-logos {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      align-items: center;
+    }
+    .client-logos img {
+      height: 40px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: var(--transition);
+    }
+    .client-logos img:hover {
+      filter: none;
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    /* INSTAGRAM FEED */
+    .instagram-feed {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .instagram-feed h4 {
+      color: var(--deep-green);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .insta-images {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .insta-images img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .insta-images img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    /* ABOUT US */
+    .about-content, .vision-mission, .founder-team {
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+      background: #fff;
+      border: 2px solid var(--sage-green);
+      border-radius: 18px;
+      padding: 2.5rem 2.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .about-content:hover, .vision-mission:hover, .founder-team:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .about-content h3, .vision-mission h3, .founder-team h3 {
+      color: var(--deep-green);
+      margin-top: 0;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .about-content h3:after, .vision-mission h3:after, .founder-team h3:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: var(--sage-green);
+      bottom: 0;
+      left: 0;
+    }
+    .about-content p, .vision-mission p, .founder-team p {
+      margin-bottom: 1.3rem;
+      line-height: 1.8;
+    }
+    .team-member {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed var(--sage-green);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .team-member:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    .founder-photo {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 3px solid var(--sage-green);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: var(--transition);
+    }
+    .team-member:hover .founder-photo {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .team-info {
+      flex: 1;
+    }
+    .team-info strong {
+      color: var(--deep-green);
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .team-info em {
+      color: var(--earth-green);
+      font-size: 0.95rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    /* SUSTAINABILITY */
+    .sustainability-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .sustain-point {
+      background: var(--light-green);
+      border: 2px solid var(--earth-green);
+      border-radius: 14px;
+      width: 280px;
+      padding: 1.5rem 1.2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .sustain-point:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .sustain-point img {
+      width: 50px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    .sustain-point strong {
+      color: var(--deep-green);
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .your-impact {
+      max-width: 800px;
+      margin: 3rem auto 0 auto;
+      background: var(--light-green);
+      border: 2px solid var(--earth-green);
+      border-radius: 16px;
+      padding: 1.5rem 2.5rem;
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--dark-brown);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .your-impact:hover {
+      transform: scale(1.02);
+    }
+    .your-impact strong {
+      color: var(--deep-green);
+      font-size: 1.3rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .your-impact ul {
+      margin: 1.5rem 0 0 0;
+      padding-left: 1.5rem;
+      text-align: left;
+    }
+    .your-impact li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .your-impact li:before {
+      content: '✓';
+      color: var(--earth-green);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    /* HOW IT'S MADE */
+    .steps-process {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .step-card {
+      background: var(--light-green);
+      border: 2px solid var(--sage-green);
+      border-radius: 14px;
+      width: 240px;
+      padding: 1.5rem 1.2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+    }
+    .step-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .step-card:not(:last-child):after {
+      content: '→';
+      color: var(--sage-green);
+      font-size: 1.5rem;
+      position: absolute;
+      right: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .step-card img {
+      width: 60px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    .step-card strong {
+      color: var(--deep-green);
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .factory-cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .factory-cta p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--dark-brown);
+    }
+    .factory-cta a {
+      background: var(--sage-green);
+      color: var(--dark-brown);
+      border-radius: 20px;
+      padding: 0.8rem 1.8rem;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 0.7rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+    .factory-cta a:hover {
+      background: var(--earth-green);
+      color: var(--light-green);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    /* FOR BUSINESSES */
+    .business-section {
+      max-width: 1000px;
+      margin: 0 auto 3rem auto;
+      background: #fff;
+      border: 2px solid var(--sage-green);
+      border-radius: 18px;
+      padding: 2.5rem 2.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .business-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .business-section h3 {
+      color: var(--deep-green);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .business-section h3:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: var(--sage-green);
+      bottom: 0;
+      left: 0;
+    }
+    .business-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 1.5rem 0;
+      justify-content: center;
+    }
+    .business-list .item {
+      background: var(--light-green);
+      border: 2px solid var(--sage-green);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      width: 220px;
+      text-align: center;
+      font-size: 1.05rem;
+      transition: var(--transition);
+    }
+    .business-list .item:hover {
+      background: var(--sage-green);
+      transform: translateY(-5px);
+    }
+    .business-section ul {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+    }
+    .business-section li {
+      margin-bottom: 0.8rem;
+      line-height: 1.7;
+    }
+    .enquiry-form {
+      margin-top: 2rem;
+      text-align: left;
+      background: var(--light-green);
+      padding: 2rem;
+      border-radius: 14px;
+      border: 2px solid var(--sage-green);
+    }
+    .enquiry-form h4 {
+      color: var(--deep-green);
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .enquiry-form label {
+      display: block;
+      margin: 1rem 0 0.5rem 0;
+      font-weight: 600;
+      color: var(--deep-green);
+    }
+    .enquiry-form input, .enquiry-form select, .enquiry-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 0.8rem;
+      border: 1px solid var(--sage-green);
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #fff;
+      transition: var(--transition);
+    }
+    .enquiry-form input:focus, .enquiry-form select:focus, .enquiry-form textarea:focus {
+      border-color: var(--earth-green);
+      box-shadow: 0 0 0 3px rgba(58,125,68,0.2);
+      outline: none;
+    }
+    .enquiry-form button {
+      background: var(--earth-green);
+      color: var(--light-green);
+      border: none;
+      border-radius: 20px;
+      padding: 0.8rem 1.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1.05rem;
+      transition: var(--transition);
+      display: block;
+      margin: 2rem auto 0 auto;
+      box-shadow: var(--shadow);
+    }
+    .enquiry-form button:hover {
+      background: var(--sage-green);
+      color: var(--dark-brown);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    /* EVENTS SECTION */
+    .events-section {
+      max-width: 1000px;
+      margin: 0 auto 3rem auto;
+      background: #fff;
+      border: 2px solid var(--sage-green);
+      border-radius: 18px;
+      padding: 2.5rem 2.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .events-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .events-section h3 {
+      color: var(--deep-green);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .events-section h3:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: var(--sage-green);
+      bottom: 0;
+      left: 0;
+    }
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .event-card {
+      background: var(--light-green);
+      border: 2px solid var(--sage-green);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .event-card h4 {
+      color: var(--deep-green);
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+    .event-date {
+      display: inline-block;
+      background: var(--sage-green);
+      color: var(--dark-brown);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .event-card p {
+      margin-bottom: 1.2rem;
+    }
+    .event-card a {
+      color: var(--earth-green);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .event-card a:hover {
+      color: var(--deep-green);
+    }
+    /* MEDIA & BLOGS */
+    .media-blogs {
+      max-width: 1000px;
+      margin: 0 auto 3rem auto;
+      background: #fff;
+      border: 2px solid var(--sage-green);
+      border-radius: 18px;
+      padding: 2.5rem 2.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .media-blogs:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .media-blogs h3 {
+      color: var(--deep-green);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .media-blogs h3:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: var(--sage-green);
+      bottom: 0;
+      left: 0;
+    }
+    .media-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .media-card {
+      background: var(--light-green);
+      border: 2px solid var(--sage-green);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+    .media-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .media-card h4 {
+      color: var(--deep-green);
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+    .media-card p {
+      margin-bottom: 1.2rem;
+    }
+    .media-card a {
+      color: var(--earth-green);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .media-card a:hover {
+      color: var(--deep-green);
+    }
+    .view-all {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .view-all a {
+      background: var(--sage-green);
+      color: var(--dark-brown);
+      border-radius: 20px;
+      padding: 0.8rem 1.8rem;
+      font-weight: 700;
+      display: inline-block;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+    .view-all a:hover {
+      background: var(--earth-green);
+      color: var(--light-green);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    /* CONTACT */
+    .contact-section {
+      max-width: 1000px;
+      margin: 0 auto 3rem auto;
+      background: #fff;
+      border: 2px solid var(--sage-green);
+      border-radius: 18px;
+      padding: 2.5rem 2.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: flex-start;
+      transition: var(--transition);
+    }
+    .contact-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .contact-form {
+      flex: 1 1 400px;
+    }
+    .contact-form h3 {
+      color: var(--deep-green);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .contact-form h3:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: var(--sage-green);
+      bottom: 0;
+      left: 0;
+    }
+    .contact-form label {
+      display: block;
+      margin: 1rem 0 0.5rem 0;
+      font-weight: 600;
+      color: var(--deep-green);
+    }
+    .contact-form input, .contact-form select, .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 0.8rem;
+      border: 1px solid var(--sage-green);
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #fff;
+      transition: var(--transition);
+    }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+      border-color: var(--earth-green);
+      box-shadow: 0 0 0 3px rgba(58,125,68,0.2);
+      outline: none;
+    }
+    .contact-form button {
+      background: var(--earth-green);
+      color: var(--light-green);
+      border: none;
+      border-radius: 20px;
+      padding: 0.8rem 1.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1.05rem;
+      transition: var(--transition);
+      display: block;
+      margin: 2rem auto 0 auto;
+      box-shadow: var(--shadow);
+    }
+    .contact-form button:hover {
+      background: var(--sage-green);
+      color: var(--dark-brown);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .contact-info {
+      flex: 1 1 400px;
+      font-size: 1.1rem;
+      color: var(--dark-brown);
+    }
+    .contact-info h3 {
+      color: var(--deep-green);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .contact-info h3:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: var(--sage-green);
+      bottom: 0;
+      left: 0;
+    }
+    .contact-info h4 {
+      color: var(--deep-green);
+      margin: 1.5rem 0 0.8rem 0;
+      font-size: 1.2rem;
+    }
+    .contact-info a {
+      color: var(--earth-green);
+      font-weight: 600;
+    }
+    .contact-info a:hover {
+      color: var(--deep-green);
+    }
+    .contact-details {
+      margin-bottom: 1.5rem;
+    }
+    .contact-details p {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .contact-details i {
+      color: var(--sage-green);
+      font-size: 1.2rem;
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: var(--sage-green);
+      color: var(--dark-brown);
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+    .social-links a:hover {
+      background: var(--earth-green);
+      color: var(--light-green);
+      transform: translateY(-3px);
+    }
+    .map-embed {
+      margin-top: 1.5rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      height: 250px;
+    }
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    /* BUY NOW */
+    .buy-section {
+      text-align: center;
+      padding: 3.5rem 0 3rem 0;
+      background: var(--light-green);
+    }
+    .buy-section h3 {
+      color: var(--deep-green);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    .buy-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .buy-link {
+      background: var(--sage-green);
+      color: var(--dark-brown);
+      border-radius: 20px;
+      padding: 1rem 2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      margin-bottom: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .buy-link:hover {
+      background: var(--earth-green);
+      color: var(--light-green);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .buy-section p {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+    .buy-section a {
+      color: var(--earth-green);
+      font-weight: 600;
+    }
+    .buy-section a:hover {
+      color: var(--deep-green);
+    }
+    /* FOOTER */
+    footer {
+      background: var(--deep-green);
+      color: var(--light-green);
+      padding: 3rem 1rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .footer-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+    .footer-column h4 {
+      color: var(--sage-green);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .footer-column h4:after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      background: var(--sage-green);
+      bottom: 0;
+      left: 0;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-column li {
+      margin-bottom: 0.8rem;
+    }
+    .footer-column a {
+      color: var(--light-green);
+      transition: var(--transition);
+      display: inline-block;
+    }
+    .footer-column a:hover {
+      color: var(--sage-green);
+      transform: translateX(5px);
+    }
+    .footer-bottom {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(208,214,179,0.3);
+    }
+    .footer-bottom p {
+      margin-bottom: 0.5rem;
+    }
+    footer a {
+      color: var(--sage-green);
+      font-weight: 600;
+    }
+    footer a:hover {
+      color: var(--light-green);
+    }
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .animate-delay-1 {
+      animation-delay: 0.3s;
+    }
+    .animate-delay-2 {
+      animation-delay: 0.6s;
+    }
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .why-choose, .product-range, .sustainability-points, .steps-process {
+        flex-direction: column;
+        align-items: center;
+      }
+      .video-testimonials, .contact-section {
+        flex-direction: column;
+      }
+      .video-container, .testimonials-container {
+        flex: 1 1 100%;
+      }
+      nav ul {
+        gap: 0.7rem;
+      }
+      .step-card:not(:last-child):after {
+        display: none;
+      }
+      .step-card:not(:last-child):before {
+        content: '↓';
+        color: var(--sage-green);
+        font-size: 1.5rem;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    @media (max-width: 600px) {
+      .about-content, .vision-mission, .founder-team, .business-section,
+      .events-section, .media-blogs, .contact-section {
+        padding: 1.5rem 1rem;
+      }
+      .hero-content h1 { font-size: 2rem; }
+      .hero-content p { font-size: 1.1rem; }
+      .cta-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+      .cta-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 250px;
+      }
+      .product-tile, .step-card, .sustain-point {
+        width: 100%;
+        max-width: 300px;
+      }
+      .team-member {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      .founder-photo {
+        float: none;
+        margin-right: 0;
+      }
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-column h4:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;">
+        <div style="font-family:'Georgia',serif;font-size:1.6rem;font-weight:700;letter-spacing:1.2px;color:var(--light-green);">
+          Borena Pvt. Ltd
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#aboutus">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#sustainability">Sustainability</a></li>
+            <li><a href="#howmade">Our Process</a></li>
+            <li><a href="#business">For Businesses</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#media">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME / HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content animate__animated animate__fadeIn">
+      <h1>Revolutionizing Tableware with Banana Fiber</h1>
+      <p>Sustainable, biodegradable alternatives that don't compromise on quality or style</p>
+      <div class="cta-btns">
+        <a href="#buy" class="cta-btn animate__animated animate__fadeInUp animate-delay-1">
+          <i class="fas fa-shopping-cart"></i> Shop Now
+        </a>
+        <a href="#business" class="cta-btn animate__animated animate__fadeInUp animate-delay-2">
+          <i class="fas fa-building"></i> Business Solutions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE BORENA -->
+  <section>
+    <h2 class="section-title">Why Choose Borena?</h2>
+    <p style="text-align:center;max-width:800px;margin:0 auto 2rem auto;color:var(--dark-brown);">
+      Our banana fiber tableware combines sustainability with exceptional performance, offering an eco-friendly alternative that stands up to daily use.
+    </p>
+    <div class="why-choose">
+      <div class="icon-box animate__animated animate__fadeInUp">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/leaf.png" alt="Biodegradable Icon">
+        <h3>100% Biodegradable</h3>
+        <p>Our products decompose naturally within 60-90 days, returning to the earth without leaving microplastics or toxic residues. Unlike conventional plastics that persist for centuries, our tableware completes its lifecycle responsibly.</p>
+      </div>
+      <div class="icon-box animate__animated animate__fadeInUp animate-delay-1">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/no-plastic.png" alt="Natural Icon">
+        <h3>Chemical-Free & Safe</h3>
+        <p>Made purely from banana sheath fibers with no synthetic additives, bleaches, or harmful coatings. Safe for all ages and perfect for sensitive users who prefer natural materials.</p>
+      </div>
+      <div class="icon-box animate__animated animate__fadeInUp animate-delay-2">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/fire-element.png" alt="Heat Resistant Icon">
+        <h3>Heat & Leak Resistant</h3>
+        <p>Engineered to withstand temperatures up to 100°C, making them ideal for hot beverages and meals. The natural fibers create a tight weave that prevents leaks and spills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT RANGE -->
+  <section id="products">
+    <h2 class="section-title">Our Product Range</h2>
+    <p style="text-align:center;max-width:800px;margin:0 auto 2rem auto;color:var(--dark-brown);">
+      Discover our complete line of sustainable tableware solutions for homes, businesses, and special events.
+    </p>
+    <div class="product-range">
+      <div class="product-tile animate__animated animate__fadeIn">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80" alt="Teacup">
+        <h4>Banana Fiber Teacup – 150ml</h4>
+        <ul>
+          <li>Perfect for hot beverages</li>
+          <li>Leakproof design</li>
+          <li>Holds heat effectively</li>
+          <li>Comes in sets of 6 or 12</li>
+        </ul>
+        <button class="order-btn">Order Now</button>
+      </div>
+      <div class="product-tile animate__animated animate__fadeIn animate-delay-1">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Dinner Plate">
+        <h4>Dinner Plate – 10"</h4>
+        <ul>
+          <li>Sturdy enough for full meals</li>
+          <li>Elegant natural finish</li>
+          <li>Microwave safe</li>
+          <li>Available in round/square</li>
+        </ul>
+        <button class="order-btn">Order Now</button>
+      </div>
+      <div class="product-tile animate__animated animate__fadeIn animate-delay-2">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=400&q=80" alt="Bowl">
+        <h4>Soup Bowl – 200ml</h4>
+        <ul>
+          <li>Deep design prevents spills</li>
+          <li>Comfortable to hold</li>
+          <li>Great for cereals & desserts</li>
+          <li>Stackable for storage</li>
+        </ul>
+        <button class="order-btn">Order Now</button>
+      </div>
+      <div class="product-tile animate__animated animate__fadeIn">
+        <!-- <img src="https://img.icons8.com/ios-filled/100/2a5a40/fork-and-knife.png" alt="Cutlery"> -->
+        <h4>Cutlery Set (Coming Soon)</h4>
+        <ul>
+          <li>Knife, fork & spoon set</li>
+          <li>Durable construction</li>
+          <li>Lightweight yet sturdy</li>
+          <li>100% plant-based</li>
+        </ul>
+        <button class="order-btn" disabled>Notify Me</button>
+      </div>
+      <div class="product-tile animate__animated animate__fadeIn animate-delay-1">
+        <!-- <img src="https://img.icons8.com/ios-filled/100/2a5a40/parcel.png" alt="Custom Packaging"> -->
+        <h4>Custom Packaging Solutions</h4>
+        <ul>
+          <li>Branded with your logo</li>
+          <li>Bulk order discounts</li>
+          <li>Custom shapes/sizes</li>
+          <li>Event-specific designs</li>
+        </ul>
+        <button class="order-btn">Get Quote</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FROM TREE TO TABLE / TESTIMONIALS / INSTAGRAM -->
+  <section>
+    <h2 class="section-title">From Tree to Table</h2>
+    <p style="text-align:center;max-width:800px;margin:0 auto 2rem auto;color:var(--dark-brown);">
+      Our journey from agricultural byproduct to beautiful, functional tableware
+    </p>
+    <div class="video-testimonials">
+      <div class="video-container animate__animated animate__fadeIn">
+        <iframe src="https://www.youtube.com/embed/4Vv8LZrRZ0A" title="Borena Production Process" frameborder="0" allowfullscreen></iframe>
+        <p style="margin-top:1rem;color:var(--earth-green);font-weight:500;">
+          Watch our 3-minute documentary showing how we transform banana sheath waste into premium tableware.
+        </p>
+      </div>
+      <div class="testimonials-container animate__animated animate__fadeIn animate-delay-1">
+        <h4>What Our Customers Say</h4>
+        <p class="testimonial">"We switched our entire café to Borena tableware six months ago. Not only have we reduced our plastic waste by 85%, but customers consistently compliment the natural aesthetic. The durability has surprised us - they last through dozens of uses!"<br><strong>– Green Leaf Café, Bengaluru</strong></p>
+        <p class="testimonial">"For our sustainable wedding with 300 guests, Borena provided custom-branded plates and cups that perfectly matched our theme. The best part? After the event, we could compost everything rather than sending truckloads to landfills."<br><strong>– Eco Weddings Co., Chennai</strong></p>
+       
+        <!-- <div class="client-logos">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/National_Geographic_logo.svg/2560px-National_Geographic_logo.svg.png" alt="National Geographic logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/The_Guardian_2018.svg/2560px-The_Guardian_2018.svg.png" alt="The Guardian logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/NPR_logo.svg/2560px-NPR_logo.svg.png" alt="NPR logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/TED_three_letter_logo.svg/2560px-TED_three_letter_logo.svg.png" alt="TED logo" style="height:30px;" />
+        </div> -->
+      </div>
+    </div>
+    <div class="instagram-feed">
+      <h4>Join Our Sustainable Community</h4>
+      <p style="max-width:600px;margin:0 auto 1.5rem auto;color:var(--dark-brown);">
+        Follow <a href="#" style="color:var(--earth-green);font-weight:600;">@BorenaEco</a> for daily sustainability tips, behind-the-scenes content, and special offers
+      </p>
+      <div class="insta-images">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Banana plantation" />
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80" alt="Sustainable dining" />
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Eco-friendly table setting" />
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=400&q=80" alt="Product close-up" />
+        <!-- <img src="https://images.unsplash.com/photo-1524594157364-9f1f7e4a7e6d?auto=format&fit=crop&w=400&q=80" alt="Team at work" /> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="aboutus">
+    <h2 class="section-title">Our Story</h2>
+    <div class="about-content animate__animated animate__fadeIn">
+      <h3>Who We Are</h3>
+      <p>Founded in 2023 in Tamil Nadu, Borena Pvt. Ltd is on a mission to revolutionize the tableware industry by transforming agricultural waste into beautiful, functional products. What began as a small initiative to utilize banana sheath - typically discarded after harvest - has grown into a thriving social enterprise that combines environmental innovation with rural empowerment.</p>
+      <p>Our name "Borena" comes from the Tamil words "Bore" (banana) and "Ena" (vessel), reflecting our core identity. Each product tells a story of sustainable transformation, from farm to table.</p>
+      <p>Today, we work with over 200 smallholder banana farmers across South India, providing them with additional income from what was previously waste material. Our manufacturing unit employs 45 local artisans, with particular emphasis on empowering women through skill development and fair wages.</p>
+    </div>
+    <div class="vision-mission animate__animated animate__fadeIn animate-delay-1">
+      <h3>Vision & Mission</h3>
+      <p><strong>Our Vision:</strong> To become the global benchmark for sustainable tableware, proving that eco-friendly alternatives can be both beautiful and practical while creating positive social impact.</p>
+      <p><strong>Our Mission:</strong></p>
+      <ul>
+        <li><strong>Environmental:</strong> Replace 1 billion plastic tableware items annually by 2030 through scalable, natural solutions</li>
+        <li><strong>Social:</strong> Create dignified employment for 500 rural artisans by 2025, with a focus on women's empowerment</li>
+        <li><strong>Innovation:</strong> Continuously improve our products through R&D while maintaining our chemical-free promise</li>
+        <li><strong>Education:</strong> Raise awareness about sustainable living through every product we sell</li>
+      </ul>
+    </div>
+    <div class="founder-team animate__animated animate__fadeIn animate-delay-2">
+      <h3>Meet Our Leadership Team</h3>
+     
+      <div class="team-member">
+        <!-- <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Che Raavanan Photo" class="founder-photo"> -->
+        <div class="team-info">
+          <strong>Che Raavanan @ Harish Selvaraj</strong>
+          <em>Founder & Managing Director</em>
+          <p>With a background in sustainable agriculture and 12 years in eco-product development, Che Raavanan founded Borena to address both environmental waste and rural unemployment. His vision drives our innovation.</p>
+          <p>Mail ID: <a href="mailto:cheraa0618@gmail.com">cheraa0618@gmail.com</a></p>
+        </div>
+      </div>
+     
+      <div class="team-member">
+        <!-- <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="K.Esakkiammal Photo" class="founder-photo"> -->
+        <div class="team-info">
+          <strong>K.Esakkiammal</strong>
+          <em>COO (Chief Operation Officer)</em>
+          <p>Bringing 15 years of operations experience in sustainable manufacturing, Esakkiammal ensures our production meets the highest standards of quality and efficiency while maintaining our environmental commitments.</p>
+          <p>Mail ID: <a href="mailto:esakkiammal2705200@gmail.com">esakkiammal2705200@gmail.com</a></p>
+        </div>
+      </div>
+     
+      <div class="team-member">
+        <!-- <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Brindha Aswin Photo" class="founder-photo"> -->
+        <div class="team-info">
+          <strong>Mrs. Brindha Aswin MBA (HR & MM)</strong>
+          <em>Human Resources Director</em>
+          <p>Brindha leads our people operations with a focus on creating an inclusive, empowering workplace. Her initiatives in skill development have transformed lives in our rural communities.</p>
+          <p>Mail ID: <a href="mailto:brindha4720@gmail.com">brindha4720@gmail.com</a></p>
+        </div>
+      </div>
+     
+      <div class="team-member">
+        <!-- <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="AmbikaSwthi.D Photo" class="founder-photo"> -->
+        <div class="team-info">
+          <strong>AmbikaSwthi.D</strong>
+          <em>Chief Executive Officer (CEO)</em>
+          <p>AmbikaSwthi brings strategic vision and business acumen to scale our impact. With experience in both corporate sustainability and social enterprises, she bridges profit and purpose.</p>
+          <p>Mail ID: <a href="mailto:ambikaswathidhanabal@gmail.com">ambikaswathidhanabal@gmail.com</a></p>
+        </div>
+      </div>
+     
+      <div class="team-member">
+        <!-- <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Partha Sarathi V Photo" class="founder-photo"> -->
+        <div class="team-info">
+          <strong>Partha Sarathi V</strong>
+          <em>JMD - Joint Managing Director</em>
+          <p>Partha oversees our financial strategy and partnerships. His expertise in sustainable business models helps us balance growth with our environmental mission.</p>
+          <p>Mail ID: <a href="mailto:vparthasarathi2327@gmail.com">vparthasarathi2327@gmail.com</a></p>
+        </div>
+      </div>
+     
+      <div class="team-member">
+        <!-- <img src="https://randomuser.me/api/portraits/men/82.jpg" alt="Suthan Raj Photo" class="founder-photo"> -->
+        <div class="team-info">
+          <strong>Suthan Raj (LUFFY)</strong>
+          <em>Chief Marketing Officer (CMO)</em>
+          <p>Suthan leads our brand strategy and customer engagement, spreading awareness about sustainable living through creative campaigns and authentic storytelling.</p>
+          <p>Mail ID: <a href="mailto:suthanluffy@gmail.com">suthanluffy@gmail.com</a></p>
+        </div>
+      </div>
+     
+      <p><strong>Awards & Recognition:</strong></p>
+      <ul>
+        <li>2024 National Award for Sustainable Innovation</li>
+        <li>Featured in National Geographic's "Solutions for a Sustainable Planet" series</li>
+        <li>The Guardian's "Top 10 Eco-Innovations from India"</li>
+        <li>TEDx Talk: "Turning Agricultural Waste into Environmental Solutions"</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SUSTAINABILITY -->
+  <section id="sustainability">
+    <h2 class="section-title">Our Sustainability Impact</h2>
+    <p style="text-align:center;max-width:800px;margin:0 auto 2rem auto;color:var(--dark-brown);">
+      True sustainability goes beyond the product - it's about our entire process and the positive ripple effects we create
+    </p>
+    <div class="sustainability-points">
+      <div class="sustain-point animate__animated animate__fadeIn">
+        <!-- <img src="https://img.icons8.com/ios-filled/100/2a5a40/recycle.png" alt="Waste to Worth"> -->
+        <strong>Circular Economy Model</strong>
+        <p>We've created a closed-loop system where banana sheath - traditionally burned as waste - becomes valuable raw material, reducing agricultural pollution while creating eco-products</p>
+      </div>
+      <div class="sustain-point animate__animated animate__fadeIn animate-delay-1">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/water.png" alt="Low Resource">
+        <strong>Low-Impact Manufacturing</strong>
+        <p>Our production uses 80% less water than paper pulp processing and runs on solar energy. All byproducts are composted or recycled - we achieve near zero waste</p>
+      </div>
+      <div class="sustain-point animate__animated animate__fadeIn animate-delay-2">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/no-plastic.png" alt="Zero Plastics">
+        <strong>Plastic-Free Promise</strong>
+        <p>From raw materials to packaging, we eliminate plastics at every stage. Even our shipping materials are plant-based and compostable</p>
+      </div>
+      <div class="sustain-point animate__animated animate__fadeIn">
+        <!-- <img src="https://img.icons8.com/ios-filled/100/2a5a40/farmer.png" alt="Support to Farmers"> -->
+        <strong>Farmer Partnerships</strong>
+        <p>We pay premium prices for banana sheath, providing farmers with 15-20% additional annual income from what was previously waste</p>
+      </div>
+      <div class="sustain-point animate__animated animate__fadeIn animate-delay-1">
+        <!-- <img src="https://img.icons8.com/ios-filled/100/2a5a40/compost.png" alt="Compostable"> -->
+        <strong>End-of-Life Solution</strong>
+        <p>Our products compost in 60-90 days in home compost systems, completing the natural cycle. We provide composting guides with every order</p>
+      </div>
+      <div class="sustain-point animate__animated animate__fadeIn animate-delay-2">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/conference-call.png" alt="Community">
+        <strong>Community Development</strong>
+        <p>5% of profits fund rural education initiatives, including environmental awareness programs in local schools</p>
+      </div>
+    </div>
+    <div class="your-impact animate__animated animate__fadeIn">
+      <strong>Your Impact Matters</strong>
+      <p>Every Borena product you choose creates measurable positive change:</p>
+      <ul>
+        <li>Prevents 30 plastic items from entering oceans annually</li>
+        <li>Reduces 2.5kg of CO₂ emissions compared to plastic alternatives</li>
+        <li>Provides 30 minutes of fair-wage employment for rural artisans</li>
+        <li>Supports sustainable farming practices</li>
+        <li>Educates communities about waste reduction</li>
+      </ul>
+      <p style="margin-top:1.5rem;font-style:italic;">"Small choices, when multiplied by millions, can transform the world."</p>
+    </div>
+  </section>
+
+  <!-- HOW IT'S MADE -->
+  <section id="howmade">
+    <h2 class="section-title">Our Craftsmanship Process</h2>
+    <p style="text-align:center;max-width:800px;margin:0 auto 2rem auto;color:var(--dark-brown);">
+      Traditional techniques meet modern sustainability in our 8-step manufacturing process
+    </p>
+    <div class="steps-process">
+      <div class="step-card animate__animated animate__fadeIn">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/banana.png" alt="Banana Sheath Collection">
+        <strong>1. Ethical Sourcing</strong>
+        <p>We collect banana sheaths from partner farms within 50km radius, ensuring fresh materials and reducing transport emissions</p>
+      </div>
+      <div class="step-card animate__animated animate__fadeIn animate-delay-1">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/water.png" alt="Cleaning & Drying">
+        <strong>2. Natural Preparation</strong>
+        <p>Sheaths are washed in rainwater and sun-dried - no chemicals or artificial drying methods are used</p>
+      </div>
+      <div class="step-card animate__animated animate__fadeIn animate-delay-2">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/scissors.png" alt="Cutting">
+        <strong>3. Precision Cutting</strong>
+        <p>Artisans hand-cut the prepared fibers to optimal sizes for different products, minimizing waste</p>
+      </div>
+      <div class="step-card animate__animated animate__fadeIn">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/engineering.png" alt="Molding & Pressing">
+        <strong>4. Eco-Molding</strong>
+        <p>Fibers are pressed into shape using our solar-powered hydraulic machines at low temperatures</p>
+      </div>
+      <div class="step-card animate__animated animate__fadeIn animate-delay-1">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/sun.png" alt="Drying">
+        <strong>5. Natural Curing</strong>
+        <p>Items dry naturally in shaded areas for 48 hours to achieve perfect durability</p>
+      </div>
+      <div class="step-card animate__animated animate__fadeIn animate-delay-2">
+        <!-- <img src="https://img.icons8.com/ios-filled/100/2a5a40/sanding.png" alt="Finishing"> -->
+        <strong>6. Hand Finishing</strong>
+        <p>Each piece is smoothed and inspected by our quality team - no two pieces are exactly alike</p>
+      </div>
+      <div class="step-card animate__animated animate__fadeIn">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/ok.png" alt="Quality Check">
+        <strong>7. Rigorous Testing</strong>
+        <p>We test for heat resistance, leakproofness, and durability before approval</p>
+      </div>
+      <div class="step-card animate__animated animate__fadeIn animate-delay-1">
+        <img src="https://img.icons8.com/ios-filled/100/2a5a40/package.png" alt="Packaging">
+        <strong>8. Sustainable Packaging</strong>
+        <p>Products are packed in recycled paper with plant-based inks, ready for eco-conscious use</p>
+      </div>
+    </div>
+    <div class="factory-cta">
+      <p>Want to see our process firsthand? Visit our solar-powered facility in Tirunelveli</p>
+      <a href="#contact">Schedule a Factory Tour</a>
+    </div>
+  </section>
+
+  <!-- FOR BUSINESSES -->
+  <section id="business">
+    <h2 class="section-title">Business Solutions</h2>
+    <p style="text-align:center;max-width:800px;margin:0 auto 2rem auto;color:var(--dark-brown);">
+      Custom sustainable tableware solutions for businesses committed to environmental responsibility
+    </p>
+    <div class="business-section animate__animated animate__fadeIn">
+      <h3>Industries We Serve</h3>
+      <p>We partner with businesses across sectors to replace disposable plastics with our sustainable alternatives:</p>
+      <div class="business-list">
+        <div class="item">Cafés & Restaurants</div>
+        <div class="item">Hotel & Resort Chains</div>
+        <div class="item">Corporate Cafeterias</div>
+        <div class="item">Wedding/Event Planners</div>
+        <div class="item">Catering Services</div>
+        <div class="item">Organic Stores</div>
+        <div class="item">Retail Chains</div>
+        <div class="item">Exporters</div>
+      </div>
+
+      <h3>Custom Solutions</h3>
+      <p>Stand out with branded sustainable tableware tailored to your needs:</p>
+      <ul>
+        <li><strong>Custom Branding:</strong> Laser-engraved or printed logos using food-safe, plant-based inks</li>
+        <li><strong>Tailored Designs:</strong> Unique shapes, sizes, and colors to match your brand aesthetic</li>
+        <li><strong>Volume Discounts:</strong> Significant savings on bulk orders (MOQ 500+ pieces)</li>
+        <li><strong>Co-Branding:</strong> Highlight your sustainability commitment with our certification mark</li>
+        <li><strong>Packaging:</strong> Custom boxes, sleeves, or wraps with your branding</li>
+      </ul>
+
+      <h3>Partnership Opportunities</h3>
+      <p>Join our network of sustainability champions:</p>
+      <ul>
+        <li><strong>Regional Distributors:</strong> Exclusive territory rights with marketing support</li>
+        <li><strong>White Label:</strong> Private label our products for your brand</li>
+        <li><strong>Affiliate Program:</strong> Earn commissions by referring clients</li>
+        <li><strong>Collaborations:</strong> Joint product development for specialized needs</li>
+        for more info 
+                  CONTACT :  
+                           suthan (CMO) 
+      </ul>
+
+      <div class="enquiry-form">
+        <h4>Business Enquiry Form</h4>
+        <form>
+          <label>Your Name</label>
+          <input type="text" placeholder="First and Last Name" required>
+         
+          <label>Business Name</label>
+          <input type="text" placeholder="Company/Organization Name" required>
+         
+          <label>Email Address</label>
+          <input type="email" placeholder="Your Business Email" required>
+         
+          <label>Phone Number</label>
+          <input type="tel" placeholder="With Country Code">
+         
+          <label>Business Type</label>
+          <select>
+            <option value="">Select Your Industry</option>
+            <option>Restaurant/Café</option>
+            <option>Hotel/Resort</option>
+            <option>Corporate Facility</option>
+            <option>Event Planning</option>
+            <option>Catering Service</option>
+            <option>Retail/Distribution</option>
+            <option>Other</option>
+          </select>
+         
+          <label>Products of Interest</label>
+          <select multiple>
+            <option>Teacups (150ml)</option>
+            <option>Dinner Plates (10")</option>
+            <option>Bowls (200ml)</option>
+            <option>Cutlery Sets</option>
+            <option>Custom Shapes</option>
+            <option>Bundled Packs</option>
+          </select>
+         
+          <label>Estimated Monthly Volume</label>
+          <select>
+            <option value="">Select Volume</option>
+            <option>500-1,000 pieces</option>
+            <option>1,000-5,000 pieces</option>
+            <option>5,000-10,000 pieces</option>
+            <option>10,000+ pieces</option>
+            <option>Custom Requirements</option>
+          </select>
+         
+          <label>Additional Requirements</label>
+          <textarea rows="4" placeholder="Tell us about your specific needs (branding, custom shapes, special requirements)"></textarea>
+         
+          <button type="submit">Submit Enquiry</button>
+        </form>
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <h4>Business Testimonials</h4>
+        <p class="testimonial">"Switching to Borena's branded tableware reduced our waste management costs by 40% and became a talking point with our eco-conscious customers. The quality exceeded our expectations - they withstand daily café use beautifully."<br><strong>– Green Bean Café, Mumbai (150 locations)</strong></p>
+        <p class="testimonial">"For our luxury eco-resort, Borena created custom bamboo-finished plates that perfectly matched our aesthetic. Guests love the authentic, sustainable touch, and housekeeping appreciates how easy they are to compost after use."<br><strong>– Serenity Eco Resorts, Kerala</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events">
+    <h2 class="section-title">Events & Workshops</h2>
+    <p style="text-align:center;max-width:800px;margin:0 auto 2rem auto;color:var(--dark-brown);">
+      Join us for sustainability events, product launches, and educational workshops
+    </p>
+    <div class="events-section animate__animated animate__fadeIn">
+      <h3>Upcoming Events</h3>
+     
+      <div class="events-grid">
+        <div class="event-card">
+            <div class="event-date">June 15, 2024</div>
+            <h4>Sustainable Dining Workshop</h4>
+            <p>Learn how to host zero-waste events with our banana fiber tableware. Includes hands-on demonstration and sustainability tips for catering businesses.</p>
+            <p><strong>Location:</strong> Ambasamudram , Tirunelveli Tamilnadu india 627401</p>
+            <p><strong>Time:</strong> 10:00 AM - 6:00 PM</p>
+            <a href="#contact">Register Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+         
+          <div class="event-card">
+            <div class="event-date">July 5-7, 2024</div>
+            <h4>Farm-to-Table Exhibition</h4>
+            <p>Meet us at India's largest sustainable living expo where we'll showcase our full product range and demonstrate the manufacturing process live.</p>
+            <p><strong>Location:</strong> Bangalore International Exhibition Center</p>
+            <p><strong>Booth:</strong> Hall 3, Stand E42</p>
+            <a href="#contact">Get Free Tickets <i class="fas fa-arrow-right"></i></a>
+          </div>
+         
+          <div class="event-card">
+            <div class="event-date">August 20, 2024</div>
+            <h4>Webinar: Circular Economy in Practice</h4>
+            <p>Our founder Che Raavanan & our team will discuss how Borena's model transforms agricultural waste into economic opportunity while reducing environmental impact.</p>
+            <p><strong>Format:</strong> Online (Zoom)</p>
+            <p><strong>Time:</strong> 3:00 PM - 4:30 PM IST</p>
+            <a href="#contact">Join Webinar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+       
+        <h3 style="margin-top:3rem;">Past Events</h3>
+       
+        <div class="events-grid">
+          <div class="event-card">
+            <div class="event-date">May 10, 2024</div>
+            <h4>Earth Day Celebration</h4>
+            <p>We partnered with 50 local schools to demonstrate composting with our products and educate students about sustainable alternatives to plastic.</p>
+            <a href="#media">See Photos <i class="fas fa-arrow-right"></i></a>
+          </div>
+         
+          <div class="event-card">
+            <div class="event-date">April 3, 2024</div>
+            <h4>Women Artisans Showcase</h4>
+            <p>Highlighting the talented women behind our products with live demonstrations and their inspiring stories of economic empowerment.</p>
+            <a href="#media">Read Recap <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+       
+        <div class="view-all">
+          <a href="#contact">Request an Event in Your City</a>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- MEDIA & BLOGS -->
+    <section id="media">
+      <h2 class="section-title">Media & Blog</h2>
+      <p style="text-align:center;max-width:800px;margin:0 auto 2rem auto;color:var(--dark-brown);">
+        Stories about sustainability, our journey, and tips for eco-conscious living
+      </p>
+      <div class="media-blogs animate__animated animate__fadeIn">
+        <h3>Latest Updates</h3>
+       
+        <div class="media-list">
+          <div class="media-card">
+            <h4>Why Banana Fiber is the Future of Sustainable Tableware</h4>
+            <p>Exploring the science behind why banana fiber outperforms other plant-based alternatives for durability and environmental impact.</p>
+            <a href="#">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+         
+          <div class="media-card">
+            <h4>Behind the Scenes: A Day at Our Solar-Powered Factory</h4>
+            <p>Photo journal documenting how our team transforms agricultural waste into beautiful, functional products.</p>
+            <a href="#">View Story <i class="fas fa-arrow-right"></i></a>
+          </div>
+         
+          <div class="media-card">
+            <h4>5 Easy Ways to Host a Zero-Waste Dinner Party</h4>
+            <p>Practical tips using our products to impress guests while keeping sustainability at the forefront.</p>
+            <a href="#">Read Guide <i class="fas fa-arrow-right"></i></a>
+          </div>
+         
+          <div class="media-card">
+            <h4>Featured in National Geographic's "Solutions for a Sustainable Planet"</h4>
+            <p>We're honored to be included in this special issue highlighting innovative approaches to environmental challenges.</p>
+            <a href="#">Read Feature <i class="fas fa-arrow-right"></i></a>
+          </div>
+         
+          <div class="media-card">
+            <h4>Case Study: How a Café Chain Reduced Waste by 85%</h4>
+            <p>Detailed analysis of the environmental and financial benefits one business achieved by switching to our products.</p>
+            <a href="#">View Case Study <i class="fas fa-arrow-right"></i></a>
+          </div>
+         
+          <div class="media-card">
+            <h4>Video: The Lifecycle of Our Banana Fiber Teacup</h4>
+            <p>From banana plantation to compost heap - follow the complete journey of one of our most popular products.</p>
+            <a href="#">Watch Video <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+       
+        <div class="view-all">
+          <a href="#">View All Articles</a>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <p style="text-align:center;max-width:800px;margin:0 auto 2rem auto;color:var(--dark-brown);">
+        We'd love to hear from you - whether you have questions, partnership ideas, or just want to learn more
+      </p>
+      <div class="contact-section animate__animated animate__fadeIn">
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form>
+            <label>Your Name</label>
+            <input type="text" placeholder="First and Last Name" required>
+           
+            <label>Email Address</label>
+            <input type="email" placeholder="Your Email" required>
+           
+            <label>Phone Number</label>
+            <input type="tel" placeholder="With Country Code">
+           
+            <label>Subject</label>
+            <select>
+              <option value="">Select a Topic</option>
+              <option>Product Inquiry</option>
+              <option>Business Partnership</option>
+              <option>Press/Media</option>
+              <option>Factory Tour Request</option>
+              <option>Event Invitation</option>
+              <option>General Question</option>
+            </select>
+           
+            <label>Your Message</label>
+            <textarea rows="5" placeholder="How can we help you?" required></textarea>
+           
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+       
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+         
+          <div class="contact-details">
+            <h4>Headquarters & Factory</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Ambasamudram , Tirunelveli, Tamil Nadu 627401</p>
+            <p><i class="fas fa-phone"></i> +91 9344342750</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:borenapvtltd.com">Borena pvt.ltd</a></p>
+            <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM</p>
+          </div>
+         
+          <div class="contact-details">
+            <h4>Sales & Distribution</h4>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:borena pvt.ltd.com">borena_pvt.ltd</a></p>
+            <p><i class="fas fa-phone"></i> +91 9344342750</p>
+          </div>
+         
+          <div class="contact-details">
+            <h4>Press Inquiries</h4>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:press@borena.com">press@borena.com</a></p>
+          </div>
+         
+          <h4>Follow Our Journey</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+         
+          <div class="map-embed">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1234567890123!2d77.12345678901234!3d8.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMDcnMjQuNCJOIDc3wrAwNyczNi4xIkU!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- BUY NOW -->
+    <section class="buy-section" id="buy">
+      <h3>Ready to Make the Sustainable Switch?</h3>
+      <div class="buy-links">
+        <a href="#" class="buy-link">
+          <i class="fas fa-shopping-cart"></i> Shop Retail
+        </a>
+        <a href="#" class="buy-link">
+          <i class="fas fa-building"></i> Business Orders
+        </a>
+        <a href="#" class="buy-link">
+          <i class="fas fa-store"></i> Find Retailers
+        </a>
+        <a href="#" class="buy-link">
+          <i class="fas fa-globe-asia"></i> International
+        </a>
+      </div>
+      <p>Have questions before purchasing? <a href="#contact">Contact our sales team</a> for personalized recommendations.</p>
+    </section>
+ 
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>About Borena</h4>
+          <ul>
+            <li><a href="#aboutus">Our Story</a></li>
+            <li><a href="#howmade">Our Process</a></li>
+            <li><a href="#sustainability">Sustainability</a></li>
+            <li><a href="#media">Press & Media</a></li>
+            <li><a href="#careers">Careers</a></li>
+          </ul>
+        </div>
+       
+        <div class="footer-column">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#">Teacups & Mugs</a></li>
+            <li><a href="#">Plates & Bowls</a></li>
+            <li><a href="#">Cutlery</a></li>
+            <li><a href="#">Custom Solutions</a></li>
+          </ul>
+        </div>
+       
+        <div class="footer-column">
+          <h4>For Businesses</h4>
+          <ul>
+            <li><a href="#business">Partnerships</a></li>
+            <li><a href="#">Wholesale</a></li>
+            <li><a href="#">White Label</a></li>
+            <li><a href="#">Corporate Gifting</a></li>
+            <li><a href="#">Event Solutions</a></li>
+          </ul>
+        </div>
+       
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Sustainability Reports</a></li>
+            <li><a href="#">Composting Guide</a></li>
+            <li><a href="#">Product Care</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3>our social media pages</h3>
+        <u1>
+       <li>facebook : Borena pvt.Ltd
+       <li>insta    : Borena_pvt.ltd
+       <li>youtube  : Borenapvtltd
+       <li>linkedin : Borena pvt.ltd  
+      <ul>
+                     <h3>Handling by suthan (CMO)</h3>
+                       
+     
+      <div class="footer-bottom">
+        <p>© 2024 Borena Pvt. Ltd. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Shipping Policy</a></p>
+        <p>Made with india
